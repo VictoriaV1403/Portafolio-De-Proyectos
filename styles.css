@@ -7,9 +7,18 @@
 }
 
 body {
-    background-color: #192636;
-    color: white;
+    background: linear-gradient(80deg, #192636, #1e2a3d, #192636);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: bgAnimation 20s ease infinite;
+    color: white; /* por si el texto es oscuro */
     text-align: center;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
@@ -105,16 +114,69 @@ nav ul li a {
 
 
 .presentacion {
-    margin: 30px auto;
+    margin-top: 0px;
+    position: relative;
+    
+    display: inline-block;
+}
+.texto-arriba1 {
+    position: absolute;
+    top: 30%; /* Ajusta esta propiedad según la parte vacía que quieres utilizar */
+    left: 48%;
+    transform: translateX(-30%);
+    font-size: 30px;
+    font-weight: lighter;
+    color: #ffffff; /* Cambia el color según prefieras */
+    padding: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    
+}
+.texto-arriba {
+    position: absolute;
+    top: 40%; /* Ajusta esta propiedad según la parte vacía que quieres utilizar */
+    left: 68%;
+    transform: translateX(-30%);
+    font-size: 20px;
+    font-weight: lighter;
+    color: #ffffff; /* Cambia el color según prefieras */
+    padding: 10px;
+    white-space: nowrap;
+    margin-top: 30px;
+    
+}
+.texto-con-boton {
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical según lo necesites */
+    left: 55%;
+   
+    
+}
+.btn-proyectos {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
+    background-color: #1e2a3d; /* Azul (puedes cambiarlo) */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none; /* Para eliminar el subrayado */
+    transition: background-color 0.3s ease;
+    border: 1px solid rgb(255, 255, 255);
 }
 
-.foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 1px solid rgb(255, 255, 255);
+.btn-proyectos:hover {
+    background-color: #111820; /* Azul más oscuro cuando pasas el ratón */
+}
+
+.foto-laptop {
+    width: 600px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.3));
+    
 }
 .proyecto {
     background: #131729;
@@ -129,6 +191,12 @@ nav ul li a {
 .proyecto:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Agranda la sombra al pasar el mouse */
 }
+.proyecto img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
 
 .proyecto a {
     display: inline-block;
